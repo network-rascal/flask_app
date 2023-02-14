@@ -39,5 +39,5 @@ working through udemy course - [REST APIs with Flask and Python in 2023](https:/
     ```
 1. remove container
     ```
-    docker rm CONTAINER_ID/NAME
+    docker rm <CONTAINER_ID/NAME>
     ```
