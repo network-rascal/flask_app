@@ -38,7 +38,7 @@ def create_store():
     return store
 
 
-@app.delete("/store/<strin:store_id>")
+@app.delete("/store/<string:store_id>")
 def delete_stores(store_id):
     try:
         del stores[store_id]
