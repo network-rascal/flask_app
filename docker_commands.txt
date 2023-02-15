@@ -1,16 +1,16 @@
 create docker image:
-    docker build -t rest-apis-flask-python .
+    docker build -t flask-app .
  
 spin up container from image:
-    docker run -p 5001:5000 rest-apis-flask-python
+    docker run -p 5001:5000 flask-app
  
 spin up container leveraging and auto-update:
-    docker run -dp 5001:5000 -w /app -v "$(pwd):/app" rest-apis-flask-python
+    docker run -dp 5001:5000 -w /app -v "$(pwd):/app" flask-app
  
     (this will output the container ID)
  
 run docker container locally after leveraging gunicorn:
-    docker run -dp 5001:5000 -w /app -v "$(pwd):/app" rest-apis-flask-python sh -c "flask run --host 0.0.0.0"
+    docker run -dp 5001:5000 -w /app -v "$(pwd):/app" flask-app sh -c "flask run --host 0.0.0.0"
  
 list running containers:
     docker ps
